@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes matrixFall {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.matrix-line {
+  animation: matrixFall 15s linear infinite;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Optional: Add a fade effect at the top and bottom */
+.matrix-line::before,
+.matrix-line::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 20px;
+  z-index: 2;
+}
+
+.matrix-line::before {
+  top: 0;
+  background: linear-gradient(to bottom, black, transparent);
+}
+
+.matrix-line::after {
+  bottom: 0;
+  background: linear-gradient(to top, black, transparent);
+}
