@@ -16,7 +16,7 @@ const Header = () => {
                 width={32} 
                 height={32} 
               />
-              <span className="text-x2 font-bold">Eduvos Coding Club</span>
+              <span className="text-3xl font-bold">Eduvos Coding Club</span>
             </Link>
           </div>
           
