@@ -35,7 +35,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="text-gray-300">
               Email: contact@codingclub.com<br />
-              Location: Your University
+              Location: Eduvos Midrand
             </p>
           </div>
         </div>

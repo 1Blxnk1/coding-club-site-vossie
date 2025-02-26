@@ -28,11 +28,6 @@ export default function RootLayout({
 
           {/* Main content */}
           {children}
-
-          {/* Footer in front layer */}
-          <div className="relative z-50">
-            <Footer />
-          </div>
         </div>
       </body>
     </html>
