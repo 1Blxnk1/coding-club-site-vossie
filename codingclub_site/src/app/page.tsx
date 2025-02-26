@@ -100,7 +100,7 @@ export default function Home() {
       <div className="h-full flex flex-col justify-center px-20">
         <div className="flex flex-col items-start"> {/* Added wrapper for title and button */}
           <h1 className="text-8xl font-bold text-white relative z-50 mb-8">
-            Welcome to the Coding Club
+            Join the Club ;D
           </h1>
           <button
             className={`
@@ -130,7 +130,7 @@ export default function Home() {
       {/* Bottom right content */}
       <div className="absolute bottom-1/4 right-8 flex gap-8 text-white z-50">
         <div>
-          <h3 className="text-sm text-gray-400 mb-2">CURRENT LOCATION</h3>
+          <h3 className="text-sm text-gray-400 mb-2">LOCATION OF CLUB</h3>
           <a 
             href="https://www.google.com/maps/place/44+Alsatian+Rd,+Glen+Austin+AH,+Midrand,+1685/@-26.0215651,28.1304359,999m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1e956de9bae57a35:0xb83ffc1db3f814ee!8m2!3d-26.0215651!4f28.1330108!16s%2Fg%2F11dzmgwqvk?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"
             target="_blank"
@@ -153,7 +153,7 @@ export default function Home() {
         </div>
         <div>
           <h3 className="text-sm text-gray-400 mb-2">CONTACT</h3>
-          <p className="text-lg">hello@codingclub.com</p>
+          <p className="text-lg">admin@codingclub.com</p>
         </div>
       </div>
     </div>
