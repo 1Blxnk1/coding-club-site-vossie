@@ -38,6 +38,7 @@ const projects = [
 export default function Projects() {
   return (
     <div className="min-h-screen bg-black">
+      {/* Projects */}
       <div className="container mx-auto px-4 py-12">
         <motion.div 
           className="text-4xl font-bold text-white mb-6 text-center single-line"

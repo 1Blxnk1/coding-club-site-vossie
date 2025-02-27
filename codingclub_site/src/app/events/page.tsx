@@ -1,29 +1,28 @@
-// src/app/about/page.tsx or wherever you want to use it
 'use client'
-import { Carousel, Card } from '@/components/ui/Carousel' // adjust the import path
+import { Carousel, Card } from '@/components/ui/Carousel' 
 
 const cards = [
   {
-    src: "/image1.jpg", // Make sure these images exist in your public folder
-    title: "Web Development",
-    category: "Programming",
+    src: "/Theres.jpg", 
+    title: "Nothing here",
+    category: "coming soon",
     content: (
       <div>
-        <p>Learn modern web development techniques...</p>
+        <p>Some cool event info will be here soon...</p>
       </div>
     ),
   },
   {
-    src: "/image2.jpg",
-    title: "Mobile Apps",
-    category: "Development",
+    src: "/nothing.jpg",
+    title: "Nothing here",
+    category: "coming soon",
     content: (
       <div>
-        <p>Create cutting-edge mobile applications...</p>
+        <p>Some cool event info will be here soon...</p>
       </div>
     ),
   },
-  // Add more cards as needed
+  
 ]
 
 export default function CarouselDemo() {

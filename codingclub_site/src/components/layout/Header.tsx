@@ -8,7 +8,9 @@ const Header = () => {
 
   return (
     <header className="bg-opacity-0 text-white">
+      {/* Navbar */}
       <div className="container mx-auto px-4 py-6 bg-opacity-0">
+        {/* Logo */}
         <nav className="flex items-start px-1"> 
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
@@ -18,6 +20,7 @@ const Header = () => {
                 width={32} 
                 height={32} 
               />
+              {/* Logo Text */}
               <span className="text-3xl font-bold">Eduvos Coding Club</span>
             </Link>
           </div>

@@ -7,7 +7,6 @@ import {
   IconBrandGithub, 
   IconBrandInstagram 
 } from '@tabler/icons-react'
-
 const cards = [
   {
     src: "/president.png", 

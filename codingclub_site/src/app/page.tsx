@@ -1,7 +1,7 @@
-// src/app/page.tsx
 'use client'
 import { CodeBlock } from '@/components/ui/code-block'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false)
@@ -12,13 +12,13 @@ export default function Home() {
   const [displayedCode, setDisplayedCode] = useState('')
   const [isCodeChanging, setIsCodeChanging] = useState(false)
 
-
+  {/* Update the rotation effect to use the shuffle */}
   useEffect(() => {
-    const interval = setInterval(toggleLocation, 5000) // Switch every 5 seconds
+    const interval = setInterval(toggleLocation, 5000) 
     return () => clearInterval(interval)
   }, [locationText])
 
-
+ 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const spotlight = document.getElementById('spotlight-overlay')
     if (spotlight) {
@@ -29,13 +29,13 @@ export default function Home() {
       )`
     }
   }
-
+  
   const shuffleText = () => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
     return 'Become a member'.split('').map(() => 
       characters.charAt(Math.floor(Math.random() * characters.length))
     ).join('')
-  }
+  } 
 
   const shuffleLocation = () => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-@,.'
@@ -44,7 +44,7 @@ export default function Home() {
     ).join('')
   }
 
-
+  {/* This is location effect*/}
   const toggleLocation = () => {
     setIsLocationChanging(true)
     let iterations = 0
@@ -61,7 +61,7 @@ export default function Home() {
     }, 50)
   }
   
-
+  {/* This is button effect to scramble the words*/}
   const handleButtonHover = () => {
     setIsHovered(true)
     let iterations = 0
@@ -74,7 +74,7 @@ export default function Home() {
       }
     }, 50)
   }
-
+  {/* Code examples */}
   const codeExamples = [
     {
       language: "python",
@@ -129,14 +129,14 @@ func main() {
 } // Join the future`
     }
   ]
-
+  {/* This is the code effect, that scrambles it*/}
   const shuffleCode = () => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(){}[]<>,.;:'
     return codeExamples[currentCodeIndex].code.split('').map(() => 
       characters.charAt(Math.floor(Math.random() * characters.length))
     ).join('')
   }
-
+  
   const changeCode = () => {
     setIsCodeChanging(true)
     let iterations = 0
@@ -155,9 +155,9 @@ func main() {
     }, 50)
   }
 
-  // Update the rotation effect to use the shuffle
+  // Change code every 3 seconds
   useEffect(() => {
-    const interval = setInterval(changeCode, 3000) // Change every 3 seconds
+    const interval = setInterval(changeCode, 3000) 
     return () => clearInterval(interval)
   }, [currentCodeIndex])
 
@@ -197,9 +197,18 @@ func main() {
       {/* Layer 3: Main content */}
       <div className="h-full flex flex-col justify-center px-20">
         <div className="flex flex-col items-start">
-          <h1 className="text-8xl font-bold text-white relative z-50 mb-8">
+          <motion.h1 className="text-8xl font-bold text-white relative z-50 mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: 1, 
+            y: 0,
+            transition: {
+              duration: 0.5,
+              ease: "easeOut"
+            }
+          }}>
             Join the Club :)
-          </h1>
+          </motion.h1>
           <button onClick={() => window.open('https://global-calendula-7ee.notion.site/1a7d341fe25780d2bf4be2e65c158d30?pvs=105', '_blank')}
             className={`
               relative
@@ -235,7 +244,7 @@ func main() {
         />
       </div>
 
-      {/* Bottom right content */}
+      {/* Bottom right location and email */}
       <div className="absolute bottom-1/4 right-8 flex gap-8 text-white z-50">
         <div>
           <h3 className="text-sm text-gray-400 mb-2">LOCATION OF CLUB</h3>

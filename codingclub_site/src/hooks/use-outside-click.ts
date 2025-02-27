@@ -1,4 +1,3 @@
-// src/hooks/use-outside-click.ts
 import { useEffect, MutableRefObject } from "react";
 
 export function useOutsideClick(
