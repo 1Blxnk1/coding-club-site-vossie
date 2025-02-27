@@ -166,10 +166,41 @@ export default function About() {
         >
         About Us
       </motion.div>
-        <p className="text-lg text-gray-300 mb-12">
-          Welcome to the Eduvos Coding Club...
-        </p>
+      <motion.p 
+          className="text-lg text-gray-300 mb-12 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ 
+            opacity: 1,
+            transition: { delay: 0.2, duration: 0.5 }
+          }}
+        >
+          The Coding Club is a vibrant community of tech enthusiasts, beginners, and experienced programmers passionate about learning, collaboration, and innovation. Our mission is to create a supportive environment where members can develop coding skills, work on exciting projects, and participate in hackathons, workshops, and networking events. Whether you're just starting out or looking to refine your expertise, the club offers resources, mentorship, and opportunities to grow. Join us to code, create, and connect with like-minded individuals who share a passion for technology and problem-solving!
+        </motion.p>
       </div>
+
+      <motion.div 
+          className="text-4xl font-bold text-white mb-6 text-center single-line"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: 1, 
+            y: 0,
+            transition: {
+              duration: 0.5,
+              ease: "easeOut"
+            }
+          }}
+          style={{
+            display: "block",
+            textAlign: "center",
+            position: "relative",
+            translate: "none",
+            rotate: "none",
+            scale: "none",
+            transform: "translate(0px)"
+          }}
+        >
+        Find us on
+      </motion.div>
 
       {/* Cards section */}
       <div className="py-20 bg-black">

@@ -178,7 +178,7 @@ func main() {
       <div className="
         fixed 
         inset-0 
-        text-green-500/20 
+        text-teal-700/90 
         font-mono
       ">
         {Array.from({ length: 50 }).map((_, i) => (
@@ -226,7 +226,7 @@ func main() {
       </div>
 
       {/* Code Block above location */}
-      <div className="absolute bottom-1/3 right-8 z-50 w-[400px]">
+      <div className="absolute bottom-1/2 right-20 z-50 w-[400px]">
         <CodeBlock
           language={codeExamples[currentCodeIndex].language}
           filename={codeExamples[currentCodeIndex].filename}
