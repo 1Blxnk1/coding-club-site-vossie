@@ -8,6 +8,10 @@ export default function Home() {
   const [buttonText, setButtonText] = useState('Become a member')
   const [locationText, setLocationText] = useState('-26.02143009971126, 28.132987447379186')
   const [isLocationChanging, setIsLocationChanging] = useState(false)
+  const [currentCodeIndex, setCurrentCodeIndex] = useState(0)
+  const [displayedCode, setDisplayedCode] = useState('')
+  const [isCodeChanging, setIsCodeChanging] = useState(false)
+
 
   useEffect(() => {
     const interval = setInterval(toggleLocation, 5000) // Switch every 5 seconds
@@ -40,6 +44,7 @@ export default function Home() {
     ).join('')
   }
 
+
   const toggleLocation = () => {
     setIsLocationChanging(true)
     let iterations = 0
@@ -70,9 +75,97 @@ export default function Home() {
     }, 50)
   }
 
-  const codeExample = `# Welcome to Coding Club!
-  print("Hello, World!")
-  # Join us to learn more :)`
+  const codeExamples = [
+    {
+      language: "python",
+      filename: "hello.py",
+      code: `# Python
+print("Hello, World!")
+# Simple and clean :)`
+    },
+    {
+      language: "javascript",
+      filename: "hello.js",
+      code: `// JavaScript
+console.log("Hello, World!");
+// Join us to learn more!`
+    },
+    {
+      language: "java",
+      filename: "Hello.java",
+      code: `// Java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+} // Code with us!`
+    },
+    {
+      language: "cpp",
+      filename: "hello.cpp",
+      code: `// C++
+#include <iostream>
+int main() {
+    std::cout << "Hello, World!";
+    return 0;
+} // Let's build together`
+    },
+    {
+      language: "rust",
+      filename: "hello.rs",
+      code: `// Rust
+fn main() {
+    println!("Hello, World!");
+} // Innovation starts here`
+    },
+    {
+      language: "go",
+      filename: "hello.go",
+      code: `// Go
+package main
+import "fmt"
+func main() {
+    fmt.Println("Hello, World!")
+} // Join the future`
+    }
+  ]
+
+  const shuffleCode = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(){}[]<>,.;:'
+    return codeExamples[currentCodeIndex].code.split('').map(() => 
+      characters.charAt(Math.floor(Math.random() * characters.length))
+    ).join('')
+  }
+
+  const changeCode = () => {
+    setIsCodeChanging(true)
+    let iterations = 0
+    const interval = setInterval(() => {
+      setDisplayedCode(shuffleCode())
+      iterations++
+      if (iterations > 10) {
+        clearInterval(interval)
+        setCurrentCodeIndex((prevIndex) => {
+          const newIndex = (prevIndex + 1) % codeExamples.length
+          setDisplayedCode(codeExamples[newIndex].code)
+          return newIndex
+        })
+        setIsCodeChanging(false)
+      }
+    }, 50)
+  }
+
+  // Update the rotation effect to use the shuffle
+  useEffect(() => {
+    const interval = setInterval(changeCode, 3000) // Change every 3 seconds
+    return () => clearInterval(interval)
+  }, [currentCodeIndex])
+
+  // Initialize displayed code
+  useEffect(() => {
+    setDisplayedCode(codeExamples[0].code)
+  }, [])
+
 
   
 
@@ -135,9 +228,9 @@ export default function Home() {
       {/* Code Block above location */}
       <div className="absolute bottom-1/3 right-8 z-50 w-[400px]">
         <CodeBlock
-          language="python"
-          filename="welcome.py"
-          code={codeExample}
+          language={codeExamples[currentCodeIndex].language}
+          filename={codeExamples[currentCodeIndex].filename}
+          code={displayedCode}
           highlightLines={[2]}
         />
       </div>
