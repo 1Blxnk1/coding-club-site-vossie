@@ -2,6 +2,12 @@
 'use client'
 import { Carousel, Card } from '@/components/ui/Carousel'
 import { motion } from 'framer-motion'
+import { 
+  IconBrandTiktok, 
+  IconBrandLinkedin, 
+  IconBrandGithub, 
+  IconBrandInstagram 
+} from '@tabler/icons-react'
 
 const cards = [
   {
@@ -178,29 +184,6 @@ export default function About() {
         </motion.p>
       </div>
 
-      <motion.div 
-          className="text-4xl font-bold text-white mb-6 text-center single-line"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ 
-            opacity: 1, 
-            y: 0,
-            transition: {
-              duration: 0.5,
-              ease: "easeOut"
-            }
-          }}
-          style={{
-            display: "block",
-            textAlign: "center",
-            position: "relative",
-            translate: "none",
-            rotate: "none",
-            scale: "none",
-            transform: "translate(0px)"
-          }}
-        >
-        Find us on
-      </motion.div>
 
       {/* Cards section */}
       <div className="py-20 bg-black">
@@ -237,6 +220,80 @@ export default function About() {
             />
           ))}
         />
+      </div>
+
+      <motion.div 
+          className="text-xl font-bold text-white mb-6 text-center single-line"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: 1, 
+            y: 0,
+            transition: {
+              duration: 0.5,
+              ease: "easeOut"
+            }
+          }}
+          style={{
+            display: "block",
+            textAlign: "center",
+            position: "relative",
+            translate: "none",
+            rotate: "none",
+            scale: "none",
+            transform: "translate(0px)"
+          }}
+        >
+        You can find us all on
+      </motion.div>
+      {/* Social Media Links */}
+      <div className="flex justify-center gap-8 mb-20">
+        <motion.a
+          href="https://www.tiktok.com/@codingclub404"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-gray-300 transition-colors"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          <IconBrandTiktok size={32} />
+        </motion.a>
+
+        <motion.a
+          href="https://www.linkedin.com/in/coding-club-3841b1349"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-blue-400 transition-colors"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <IconBrandLinkedin size={32} />
+        </motion.a>
+
+        <motion.a
+          href="https://github.com/CODINGCLUB404"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-gray-400 transition-colors"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <IconBrandGithub size={32} />
+        </motion.a>
+
+        <motion.a
+          href="https://www.instagram.com/codingclub404/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-pink-400 transition-colors"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <IconBrandInstagram size={32} />
+        </motion.a>
       </div>
     </div>
   )
