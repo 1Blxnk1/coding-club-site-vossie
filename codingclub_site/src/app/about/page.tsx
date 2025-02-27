@@ -1,6 +1,7 @@
 // src/app/about/page.tsx
 'use client'
 import { Carousel, Card } from '@/components/ui/Carousel'
+import { motion } from 'framer-motion'
 
 const cards = [
   {
@@ -55,7 +56,7 @@ const cards = [
         </div>
   
         <a 
-          href="https://linkedin.com/in/your-profile" 
+          href="https://www.linkedin.com/in/vusi-kunene-matlou/" 
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-6 bg-blue-600 text-white px-8 py-4 rounded-lg 
@@ -67,71 +68,70 @@ const cards = [
     ),
   },
   {
-    src: "/hackathons.jpg",
-    title: "Hackathons",
-    category: "Events",
+    src: "/VicePres.png",
+    title: "Tanatswanashe Mthembu",
+    category: "Vice President",
     content: (
       <div className="text-black dark:text-white">
-        <h3 className="text-2xl font-bold mb-4">Regular Hackathons</h3>
+        <h3 className="text-2xl font-bold mb-4">About Me</h3>
         <p className="text-lg">
-          Put your skills to the test in our themed hackathons. Build projects,
-          solve problems, and win prizes!
+          I am the Vice Presidnet... More Info coming soon.
         </p>
       </div>
     ),
   },
   {
-    src: "/mentorship.jpg",
-    title: "Mentorship",
-    category: "Support",
+    src: "/secretary.png",
+    title: "Ayanda Dlamini",
+    category: "Secretary",
     content: (
       <div className="text-black dark:text-white">
-        <h3 className="text-2xl font-bold mb-4">1-on-1 Mentorship</h3>
+        <h3 className="text-2xl font-bold mb-4">About Me</h3>
         <p className="text-lg">
-          Get guidance from experienced developers who can help you navigate
-          your coding journey.
+          I am the Secretary... More Info coming soon.
         </p>
       </div>
     ),
   },
   {
-    src: "/projects.jpg",
-    title: "Real Projects",
-    category: "Experience",
+    src: "/treasurer.png",
+    title: "Thoriso Dibatana",
+    category: "Treasurer",
     content: (
       <div className="text-black dark:text-white">
-        <h3 className="text-2xl font-bold mb-4">Real-World Projects</h3>
+        <h3 className="text-2xl font-bold mb-4">About Me</h3>
         <p className="text-lg">
-          Work on actual projects that solve real problems. Build your portfolio
-          while making a difference.
+        A final year BSc Computer Science student, with an interest in software development and engineering. 
+        I am an independent thinker with a strong problem-solving orientation, adept at thriving under pressure and collaborating effectively in team settings. 
+        Punctuality, integrity, and a commitment to continuous self-improvement are central to my work ethic. 
+        My primary goal during this current phase of early career development is to explore the diverse opportunities within the tech industry to discover where my interests and strengths align best. 
+        I am passionate about leveraging my education and practical experience in computer science to drive my career growth and contribute to a future where technology enhances our world.
         </p>
       </div>
     ),
   },
   {
-    src: "/community.jpg",
-    title: "Community",
-    category: "Network",
+    src: "/eventsplanner.png",
+    title: "Vuyisile Shokane",
+    category: "Events Planner",
     content: (
       <div className="text-black dark:text-white">
-        <h3 className="text-2xl font-bold mb-4">Vibrant Community</h3>
+        <h3 className="text-2xl font-bold mb-4">About Me</h3>
         <p className="text-lg">
-          Join a community of like-minded developers. Share knowledge, collaborate,
-          and grow together.
+          I am the Events Planner... More Info coming soon.
         </p>
       </div>
     ),
   },
   {
-    src: "/resources.jpg",
-    title: "Resources",
-    category: "Tools",
+    src: "/wellness.png",
+    title: "Conquerant Lembindi",
+    category: "Student Wellness",
     content: (
       <div className="text-black dark:text-white">
-        <h3 className="text-2xl font-bold mb-4">President</h3>
+        <h3 className="text-2xl font-bold mb-4">About Me</h3>
         <p className="text-lg">
-          Access our curated collection of learning materials, tutorials, and
-          coding challenges.
+         I am the Student Wellness... More Info coming soon.
         </p>
       </div>
     ),
@@ -143,7 +143,29 @@ export default function About() {
     <div className="min-h-screen bg-black">
       {/* Your existing about content */}
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-white mb-6">About Us</h1>
+      <motion.div 
+          className="text-4xl font-bold text-white mb-6 text-center single-line"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: 1, 
+            y: 0,
+            transition: {
+              duration: 0.5,
+              ease: "easeOut"
+            }
+          }}
+          style={{
+            display: "block",
+            textAlign: "center",
+            position: "relative",
+            translate: "none",
+            rotate: "none",
+            scale: "none",
+            transform: "translate(0px)"
+          }}
+        >
+        About Us
+      </motion.div>
         <p className="text-lg text-gray-300 mb-12">
           Welcome to the Eduvos Coding Club...
         </p>
@@ -151,9 +173,29 @@ export default function About() {
 
       {/* Cards section */}
       <div className="py-20 bg-black">
-        <h2 className="text-3xl font-bold text-white text-center mb-12">
-          Meet the Team behind it
-        </h2>
+      <motion.div 
+          className="text-4xl font-bold text-white mb-6 text-center single-line"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: 1, 
+            y: 0,
+            transition: {
+              duration: 0.5,
+              ease: "easeOut"
+            }
+          }}
+          style={{
+            display: "block",
+            textAlign: "center",
+            position: "relative",
+            translate: "none",
+            rotate: "none",
+            scale: "none",
+            transform: "translate(0px)"
+          }}
+        >
+        Meet the Team
+      </motion.div>
         <Carousel
           items={cards.map((card, index) => (
             <Card
