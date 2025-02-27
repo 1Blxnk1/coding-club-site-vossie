@@ -37,5 +37,5 @@ A dynamic website for the Eduvos Coding Club, built for the Eduvos Hackathon 202
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-link]
+git clone https://github.com/1Blxnk1/coding-club-site-vossie.git
 cd codingclub_site
