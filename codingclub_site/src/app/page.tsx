@@ -200,7 +200,7 @@ func main() {
           <h1 className="text-8xl font-bold text-white relative z-50 mb-8">
             Join the Club :)
           </h1>
-          <button
+          <button onClick={() => window.open('https://global-calendula-7ee.notion.site/1a7d341fe25780d2bf4be2e65c158d30?pvs=105', '_blank')}
             className={`
               relative
               z-50

@@ -1,12 +1,15 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+  const pathname = usePathname()
+
   return (
     <header className="bg-opacity-0 text-white">
       <div className="container mx-auto px-4 py-6 bg-opacity-0">
-        
-        <nav className="flex items-start"> 
+        <nav className="flex items-start px-1"> 
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <Image 
@@ -20,35 +23,45 @@ const Header = () => {
           </div>
           
           {/* Centered Links */}
-          <div className="hidden md:flex flex-grow justify-center space-x-12"> {/* increased space-x and added justify-center */}
-            <Link 
-              href="/" 
-              className="hover:text-gray-300 transition-colors"
-            >
-              Home
-            </Link>
-            <Link 
-              href="/about" 
-              className="hover:text-gray-300 transition-colors"
-            >
-              About
-            </Link>
-            <Link 
-              href="/projects" 
-              className="hover:text-gray-300 transition-colors"
-            >
-              Projects
-            </Link>
-            <Link 
-              href="/events" 
-              className="hover:text-gray-300 transition-colors"
-            >
-              Events
-            </Link>
+          <div className="hidden md:flex flex-grow justify-center space-x-12">
+            {[
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About' },
+              { href: '/projects', label: 'Projects' },
+              { href: '/events', label: 'Events' },
+            ].map(({ href, label }) => (
+              <Link 
+                key={href}
+                href={href} 
+                className={`
+                  relative
+                  group
+                  transition-colors
+                  ${pathname === href ? 'text-white' : 'text-gray-300'}
+                `}
+              >
+                {label}
+                <span 
+                  className={`
+                    absolute 
+                    -bottom-1 
+                    left-0 
+                    w-full 
+                    h-0.5 
+                    bg-white
+                    transform
+                    origin-left
+                    transition-transform
+                    duration-300
+                    ${pathname === href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}
+                  `}
+                />
+              </Link>
+            ))}
           </div>
 
           {/* Empty div to balance the layout */}
-          <div className="flex-shrink-0 w-[200px]"></div> {/* Width matches logo section */}
+          <div className="flex-shrink-0 w-[200px]"></div>
         </nav>
       </div>
     </header>

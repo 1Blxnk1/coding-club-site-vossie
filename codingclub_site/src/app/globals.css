@@ -35,7 +35,6 @@ body {
   line-height: 1;
 }
 
-/* Optional: Add a fade effect at the top and bottom */
 .matrix-line::before,
 .matrix-line::after {
   content: '';
@@ -66,5 +65,10 @@ body {
 @media (max-width: 768px) {
   .single-line {
     font-size: 40px;
+  }
+}
+@layer components {
+  .nav-link-underline {
+    @apply absolute -bottom-1 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300;
   }
 }
