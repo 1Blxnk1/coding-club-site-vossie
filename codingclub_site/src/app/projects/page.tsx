@@ -5,34 +5,34 @@ import { HoverEffect } from '@/components/ui/card-hover-effect' // We'll create 
 
 const projects = [
   {
-    title: "Student Management System",
-    description: "A comprehensive system built with Next.js and TypeScript for managing student records, attendance, and academic performance.",
-    link: "/projects/student-management"
+    title: "Web-dev-resources",
+    description: "A curated list of web development resources, including tools, libraries, and tutorials.",
+    link: "https://github.com/iamismile/web-dev-resources"
   },
   {
-    title: "Blockchain Voting Platform",
-    description: "A secure and transparent voting system using blockchain technology, built with Solidity and Web3.js.",
-    link: "/projects/blockchain-voting"
+    title: "Coming Soon",
+    description: "Stay tuned for more exciting projects from our coding club members.",
+    link: "n"
   },
   {
-    title: "AI Study Assistant",
-    description: "An AI-powered study assistant that helps students organize their study materials and create personalized learning paths.",
-    link: "/projects/ai-assistant"
+    title: "Coming Soon",
+    description: "Stay tuned for more exciting projects from our coding club members.",
+    link: "u"
   },
   {
-    title: "Campus Events App",
-    description: "A mobile-first web application for managing and discovering campus events, built with React Native and Firebase.",
-    link: "/projects/events-app"
+    title: "Coming Soon",
+    description: "Stay tuned for more exciting projects from our coding club members.",
+    link: "l"
   },
   {
-    title: "Code Review Platform",
-    description: "A platform for peer code reviews and collaborative learning, featuring real-time collaboration tools.",
-    link: "/projects/code-review"
+    title: "Coming Soon",
+    description: "Stay tuned for more exciting projects from our coding club members.",
+    link: "1"
   },
   {
-    title: "Cybersecurity Training Hub",
-    description: "An interactive platform for learning cybersecurity concepts through hands-on exercises and CTF challenges.",
-    link: "/projects/security-hub"
+    title: "Coming Soon",
+    description: "Stay tuned for more exciting projects from our coding club members.",
+    link: "lol"
   }
 ]
 

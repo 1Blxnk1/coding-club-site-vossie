@@ -6,8 +6,7 @@ const Header = () => {
     <header className="bg-opacity-0 text-white">
       <div className="container mx-auto px-4 py-6 bg-opacity-0">
         
-        <nav className="flex items-start"> {/* Changed to items-start */}
-          {/* Logo on the left */}
+        <nav className="flex items-start"> 
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <Image 

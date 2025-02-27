@@ -198,7 +198,7 @@ func main() {
       <div className="h-full flex flex-col justify-center px-20">
         <div className="flex flex-col items-start">
           <h1 className="text-8xl font-bold text-white relative z-50 mb-8">
-            Join the Club ;D
+            Join the Club :)
           </h1>
           <button
             className={`
