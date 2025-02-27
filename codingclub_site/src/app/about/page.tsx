@@ -1,4 +1,3 @@
-// src/app/about/page.tsx
 'use client'
 import { Carousel, Card } from '@/components/ui/Carousel'
 import { motion } from 'framer-motion'
@@ -11,7 +10,7 @@ import {
 
 const cards = [
   {
-    src: "/president.png", // Add these images to your public folder
+    src: "/president.png", 
     title: "Vusi Kunene Matlou",
     category: "President",
     content: (
@@ -113,6 +112,16 @@ const cards = [
         My primary goal during this current phase of early career development is to explore the diverse opportunities within the tech industry to discover where my interests and strengths align best. 
         I am passionate about leveraging my education and practical experience in computer science to drive my career growth and contribute to a future where technology enhances our world.
         </p>
+
+        <a 
+          href="https://www.linkedin.com/in/thoriso-dibatana/" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-6 bg-blue-600 text-white px-8 py-4 rounded-lg 
+                    text-xl font-semibold transition-all duration-300 hover:bg-blue-700"
+        >
+          LINKEDIN
+        </a>
       </div>
     ),
   },
@@ -147,7 +156,6 @@ const cards = [
 export default function About() {
   return (
     <div className="min-h-screen bg-black">
-      {/* Your existing about content */}
       <div className="container mx-auto px-4 py-12">
       <motion.div 
           className="text-4xl font-bold text-white mb-6 text-center single-line"

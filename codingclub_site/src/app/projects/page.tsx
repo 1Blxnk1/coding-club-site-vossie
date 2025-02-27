@@ -1,7 +1,6 @@
-// src/app/projects/page.tsx
 'use client'
 import { motion } from 'framer-motion'
-import { HoverEffect } from '@/components/ui/card-hover-effect' // We'll create this next
+import { HoverEffect } from '@/components/ui/card-hover-effect'
 
 const projects = [
   {
@@ -12,22 +11,22 @@ const projects = [
   {
     title: "Coming Soon",
     description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "n"
+    link: "theresnothinghere"
   },
   {
     title: "Coming Soon",
     description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "u"
+    link: "heretoo"
   },
   {
     title: "Coming Soon",
     description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "l"
+    link: "comeonbro"
   },
   {
     title: "Coming Soon",
     description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "1"
+    link: "eheheheh"
   },
   {
     title: "Coming Soon",
