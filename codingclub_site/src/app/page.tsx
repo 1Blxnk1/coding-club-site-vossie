@@ -1,5 +1,6 @@
 // src/app/page.tsx
 'use client'
+import { CodeBlock } from '@/components/ui/code-block'
 import { useEffect, useState } from 'react'
 
 export default function Home() {
@@ -69,6 +70,10 @@ export default function Home() {
     }, 50)
   }
 
+  const codeExample = `# Welcome to Coding Club!
+  print("Hello, World!")
+  # Join us to learn more :)`
+
   
 
   return (
@@ -98,7 +103,7 @@ export default function Home() {
 
       {/* Layer 3: Main content */}
       <div className="h-full flex flex-col justify-center px-20">
-        <div className="flex flex-col items-start"> {/* Added wrapper for title and button */}
+        <div className="flex flex-col items-start">
           <h1 className="text-8xl font-bold text-white relative z-50 mb-8">
             Join the Club ;D
           </h1>
@@ -125,6 +130,16 @@ export default function Home() {
             {buttonText}
           </button>
         </div>
+      </div>
+
+      {/* Code Block above location */}
+      <div className="absolute bottom-1/3 right-8 z-50 w-[400px]">
+        <CodeBlock
+          language="python"
+          filename="welcome.py"
+          code={codeExample}
+          highlightLines={[2]}
+        />
       </div>
 
       {/* Bottom right content */}
