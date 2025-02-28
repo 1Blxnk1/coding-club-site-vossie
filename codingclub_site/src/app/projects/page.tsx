@@ -61,7 +61,7 @@ export default function Projects() {
             transform: "translate(0px)"
           }}
         >
-          Our Projects
+          Our Projects & Resources
         </motion.div>
         
         <motion.p 
@@ -72,7 +72,7 @@ export default function Projects() {
             transition: { delay: 0.2, duration: 0.5 }
           }}
         >
-          Explore the innovative projects created by our coding club members
+          Explore the vast resources and innovative projects created by our coding club members
         </motion.p>
 
         <HoverEffect items={projects} />

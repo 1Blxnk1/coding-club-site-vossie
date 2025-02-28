@@ -171,15 +171,16 @@ func main() {
 
   return (
     <div 
-      className="h-screen bg-black overflow-hidden"
+      className="h-screen bg-black overflow-hidden relative" 
       onMouseMove={handleMouseMove}
     >
-      {/* Layer 1: Matrix Background */}
+      {/* Matrix Background */}
       <div className="
         fixed 
         inset-0 
         text-teal-700/90 
         font-mono
+        z-0
       ">
         {Array.from({ length: 50 }).map((_, i) => (
           <div key={i} className="whitespace-nowrap">
@@ -188,41 +189,48 @@ func main() {
         ))}
       </div>
 
-      {/* Layer 2: Black overlay with spotlight */}
+      {/* Spotlight overlay */}
       <div 
         id="spotlight-overlay"
-        className="fixed inset-0 bg-black"
+        className="fixed inset-0 bg-black z-10"
       />
 
-      {/* Layer 3: Main content */}
-      <div className="h-full flex flex-col justify-center px-20">
+      {/* Main content */}
+      <div className="relative h-full flex flex-col justify-center px-4 md:px-20 z-[15]">
         <div className="flex flex-col items-start">
-          <motion.h1 className="text-8xl font-bold text-white relative z-50 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ 
-            opacity: 1, 
-            y: 0,
-            transition: {
-              duration: 0.5,
-              ease: "easeOut"
-            }
-          }}>
+          <motion.h1 
+            className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-4 md:mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ 
+              opacity: 1, 
+              y: 0,
+              transition: {
+                duration: 0.5,
+                ease: "easeOut"
+              }
+            }}
+          >
             Join the Club :)
           </motion.h1>
-          <button onClick={() => window.open('https://global-calendula-7ee.notion.site/1a7d341fe25780d2bf4be2e65c158d30?pvs=105', '_blank')}
+          <button 
+            onClick={() => window.open('https://global-calendula-7ee.notion.site/1a7d341fe25780d2bf4be2e65c158d30?pvs=105', '_blank')}
             className={`
-              relative
-              z-50
               bg-blue-600 
               text-white 
-              px-8 
-              py-4 
+              px-6 
+              py-3 
+              md:px-8 
+              md:py-4 
               rounded-lg 
-              text-xl 
+              text-base 
+              md:text-xl 
               font-semibold 
               transition-all 
               duration-300
               inline-block
+              w-full 
+              md:w-auto
+              text-center
               ${isHovered ? 'scale-95' : 'scale-100'}
               hover:bg-blue-700
             `}
@@ -234,8 +242,16 @@ func main() {
         </div>
       </div>
 
-      {/* Code Block above location */}
-      <div className="absolute bottom-1/2 right-20 z-50 w-[400px]">
+      {/* Code Block - Hidden on mobile, visible from medium screens */}
+      <div className="
+        fixed 
+        hidden 
+        md:block 
+        bottom-1/2 
+        right-20 
+        z-[40] 
+        w-[400px]
+      ">
         <CodeBlock
           language={codeExamples[currentCodeIndex].language}
           filename={codeExamples[currentCodeIndex].filename}
@@ -244,19 +260,45 @@ func main() {
         />
       </div>
 
-      {/* Bottom right location and email */}
-      <div className="absolute bottom-1/4 right-8 flex gap-8 text-white z-50">
+      {/* Location and Contact - Adjusted for mobile */}
+      <div className="
+        fixed 
+        bottom-4 
+        md:bottom-1/4 
+        left-4 
+        right-4 
+        md:right-8 
+        md:left-auto
+        flex 
+        flex-col 
+        md:flex-row 
+        gap-4 
+        md:gap-8 
+        text-white 
+        z-[40]
+        bg-black/50
+        md:bg-transparent
+        p-4
+        md:p-0
+        rounded-lg
+        md:rounded-none
+      ">
         <div>
-          <h3 className="text-sm text-gray-400 mb-2">LOCATION OF CLUB</h3>
+          <h3 className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">
+            LOCATION OF CLUB
+          </h3>
           <a 
             href="https://www.google.com/maps/place/44+Alsatian+Rd,+Glen+Austin+AH,+Midrand,+1685/@-26.0215651,28.1304359,999m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1e956de9bae57a35:0xb83ffc1db3f814ee!8m2!3d-26.0215651!4f28.1330108!16s%2Fg%2F11dzmgwqvk?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className={`
-              text-lg 
+              text-sm
+              md:text-lg 
               hover:text-blue-400 
               transition-colors
               cursor-pointer
+              break-all
+              md:break-normal
               ${isLocationChanging ? 'select-none' : ''}
             `}
             onClick={(e) => {
@@ -269,10 +311,13 @@ func main() {
           </a>
         </div>
         <div>
-          <h3 className="text-sm text-gray-400 mb-2">CONTACT</h3>
-          <p className="text-lg">admin@codingclub.com</p>
+          <h3 className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">
+            CONTACT
+          </h3>
+          <p className="text-sm md:text-lg">admin@codingclub.com</p>
         </div>
       </div>
     </div>
   )
+
 }
