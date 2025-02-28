@@ -31,7 +31,7 @@ A dynamic website for the Eduvos Coding Club, built for the Eduvos Hackathon 202
 
 
 ## 🚀 Live Demo
-(https://1blxnk1.github.io/coding-club-site-vossie/)
+'will add soon..'
 
 ## 🏃‍♂️ Running Locally
 
