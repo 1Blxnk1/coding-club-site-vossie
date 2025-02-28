@@ -1,9 +1,14 @@
 # Eduvos Coding Club Website 🚀
 
+## Team
+- **Tadiwa Shonhiwa** : eduv4956423
+- **Calvin Dichabe** : eduv4958822
+- **Andy Luboya** : eduv4902358
+
 ## Project Overview
 A dynamic website for the Eduvos Coding Club, built for the Eduvos Hackathon 2025.
 
-## 🌟 Key Features
+## Key Features
 - **Interactive Matrix Background**: Binary rain background with spotlight hover interaction
 - **Animated Navigation**: Smooth underline animations and responsive design
 - **Team Showcase**: Interactive cards featuring club leadership and roles (Couldn't find some of the Linkedins)
@@ -11,7 +16,7 @@ A dynamic website for the Eduvos Coding Club, built for the Eduvos Hackathon 202
 - **Social Media Integration**: Connected platforms for community engagement
 - **Code Snippets**: Rotating programming examples in multiple languages
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
@@ -20,7 +25,7 @@ A dynamic website for the Eduvos Coding Club, built for the Eduvos Hackathon 202
 - **Components**: Custom-built carousel and cards
 - **Sign Up & Database**: Notion Forms
 
-## 📸 Screenshots
+## Screenshots
 ![image](https://github.com/user-attachments/assets/ba2f07a4-4f6b-4837-a439-1843d0c8a9c5)
 
 ![image](https://github.com/user-attachments/assets/b05dbd3f-ec4e-4d46-a8ab-daffe8afcbd4)
@@ -39,3 +44,4 @@ A dynamic website for the Eduvos Coding Club, built for the Eduvos Hackathon 202
 ```bash
 git clone https://github.com/1Blxnk1/coding-club-site-vossie.git
 cd codingclub_site
+npm install --legacy-peers-deps
