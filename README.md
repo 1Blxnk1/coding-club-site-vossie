@@ -38,7 +38,7 @@ A dynamic website for the Eduvos Coding Club, built for the Eduvos Hackathon 202
 
 
 ## 🚀 Live Demo
-'will add soon..'
+https://coding-club-site-vossie.vercel.app/
 
 ## 🏃‍♂️ Running Locally
 
