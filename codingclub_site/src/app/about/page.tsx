@@ -147,6 +147,15 @@ const cards = [
         <p className="text-lg">
          I am the Student Wellness... More Info coming soon.
         </p>
+        <a 
+          href="https://www.linkedin.com/in/conquerant-lembindi-a64158233/" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-6 bg-blue-600 text-white px-8 py-4 rounded-lg 
+                    text-xl font-semibold transition-all duration-300 hover:bg-blue-700"
+        >
+          LINKEDIN
+        </a>
       </div>
     ),
   },
