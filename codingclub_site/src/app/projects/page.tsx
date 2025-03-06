@@ -4,34 +4,34 @@ import { HoverEffect } from '@/components/ui/card-hover-effect'
 
 const projects = [
   {
-    title: "Web-dev-resources",
-    description: "A curated list of web development resources, including tools, libraries, and tutorials.",
-    link: "https://github.com/iamismile/web-dev-resources"
+    title: "AI-Powered Chatbot",
+    description: "Enhancing customer interactions with an intelligent AI chatbot.",
+    link: "https://github.com/example/ai-powered-chatbot"
   },
   {
-    title: "Coming Soon",
-    description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "theresnothinghere"
+    title: "Responsive Web Design",
+    description: "Creating seamless user experiences with responsive web design.",
+    link: "https://github.com/example/responsive-web-design"
   },
   {
-    title: "Coming Soon",
-    description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "heretoo"
+    title: "Machine Learning Models",
+    description: "Developing predictive models using advanced machine learning techniques.",
+    link: "https://github.com/example/machine-learning-models"
   },
   {
-    title: "Coming Soon",
-    description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "comeonbro"
+    title: "Real-Time Data Visualization",
+    description: "Visualizing data in real-time for better decision making.",
+    link: "https://github.com/example/real-time-data-visualization"
   },
   {
-    title: "Coming Soon",
-    description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "eheheheh"
+    title: "Collaborative Coding Platform",
+    description: "Facilitating collaborative coding with an innovative platform.",
+    link: "https://github.com/example/collaborative-coding-platform"
   },
   {
-    title: "Coming Soon",
-    description: "Stay tuned for more exciting projects from our coding club members.",
-    link: "lol"
+    title: "Blockchain-Based Solutions",
+    description: "Implementing secure and transparent blockchain-based solutions.",
+    link: "https://github.com/example/blockchain-based-solutions"
   }
 ]
 
