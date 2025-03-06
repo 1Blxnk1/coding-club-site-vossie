@@ -11,6 +11,17 @@ export default function Home() {
   const [currentCodeIndex, setCurrentCodeIndex] = useState(0)
   const [displayedCode, setDisplayedCode] = useState('')
   const [isCodeChanging, setIsCodeChanging] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+
+useEffect(() => {
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < 768)
+  }
+  checkMobile()
+  window.addEventListener('resize', checkMobile)
+  return () => window.removeEventListener('resize', checkMobile)
+}, [])
 
   {/* Update the rotation effect to use the shuffle */}
   useEffect(() => {
@@ -194,6 +205,32 @@ func main() {
         id="spotlight-overlay"
         className="fixed inset-0 bg-black z-10"
       />
+
+      {/* Mobile tap message */}
+        {isMobile && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+            className="
+              fixed 
+              top-15
+              left-1/2 
+              -translate-x-1/2 
+              z-50 
+              bg-black/80 
+              px-4 
+              py-2 
+              rounded-full 
+              pointer-events-none
+              text-center
+            "
+          >
+            <p className="text-white text-sm">
+              Tap and move to reveal matrix
+            </p>
+          </motion.div>
+        )}
 
       {/* Main content */}
       <div className="relative h-full flex flex-col justify-center px-4 md:px-20 z-[15]">

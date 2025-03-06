@@ -15,6 +15,8 @@ A dynamic website for the Eduvos Coding Club, built for the Eduvos Hackathon 202
 - **Event Calendar**: Upcoming workshops, hackathons, and learning sessions
 - **Social Media Integration**: Connected platforms for community engagement
 - **Code Snippets**: Rotating programming examples in multiple languages
+- **Mobile optimization**: Optimized for mobile view
+
 
 ## Tech Stack
 - **Framework**: Next.js 15 with App Router
